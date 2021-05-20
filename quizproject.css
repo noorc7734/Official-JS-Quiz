@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #4E5340;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+      'header header header header' 
+      'left left left left' 
+      'right right right right' 
+      'footer1 footer1 footer1 footer1'
+	  'footer2 footer2 footer2 footer2';
+      grid-template-columns: repeat(4, 25%);
+}
+  
+h2 {
+	text-align: center;
+} 
+
+p {
+	text-align: center;
+}
+
+.left,
+.right,
+.header,
+.footer1, .footer2 {
+  
+  display:grid;
+  justify-items:center;  
+  align-items:center;  
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  background-color: #E7DECD;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  background-color: #DED1BA;
+  padding:10px;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  background-color: #4E5340;
+  padding: 50px;
+  text-align: center;
+}
+.footer2 {
+  grid-area: footer2;
+  background-color: #4E5340;
+  padding: 10px;
+  text-align: center;
+}
+
+
+#question {
+  font-size: 45px;
+  font-weight:bold;
+}
+
+
+.options {
+   font-size:1.5em;
+   padding:0.4em;
+}
+
+#lightbox {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.8);   
+}
+
+#message {
+    width:80%;
+    min-width:400px;
+    padding:20px;
+    background-color:black;
+    color:white;
+    text-align:center;
+    font-size:4em;
+    font-weight:bold;
+	/* veritcally and horizontally center the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.button {
+	
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (min-width: 600px) {
+ .grid-container  {
+  grid-template-areas: 
+    'header header header header' 
+    'left left right right' 
+    'footer1 footer1 footer2 footer2';
+  
+}
+}

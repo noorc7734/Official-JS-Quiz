@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AOT Quiz</title>
+	<script src="quizproject.js"></script>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
+</head>
+<body onLoad="loadQuestion()">
+
+<div id="lightbox" onclick="closeLightBox()">
+	<div id="message">Welcome to the AOT Quiz! <br> Click anywhere to start. </div>
+</div>
+
+
+<h1 id="home"></h1>
+ 
+
+<h2>Attack on Titan Quiz (Spoiler Free!)</h2>
+<p>Choose the answer that best fits each question. You have a time limit of 1 minute to complete all ten questions. Good luck!</p>
+
+<div class="grid-container">
+  <div class="header">
+    <div id="question">The Question</div>
+  </div>
+  
+  <div class="left">
+    <div>
+	
+    Choose the best answer
+     <div class="options" id="a" onclick="markIt('a')">A.</div>
+	 <div class="options" id="b" onclick="markIt('b')">B.</div>
+     <div class="options" id="c" onclick="markIt('c')">C.</div>
+	 <div class="options" id="d" onclick="markIt('d')">D.</div>
+	</div>
+  </div> 
+	
+	
+	
+  <div class="right"> <img id="image" src="" alt=""></div>
+  
+  
+  
+  <div class="footer1">
+    <p>Score<br><span id="score"></span></p>
+	</div>
+
+	<div class="footer2">
+	<button class="button" type="submit" onClick="refreshPage()">Restart Quiz</button>
+	<br>
+   <div id="countdown"> </div> 
+	</div>
+	
+  </div>
+
+
+</body>
+</html>
